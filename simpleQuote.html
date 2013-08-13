@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="sliderStyle.css" media="screen" type="text/css" rel="stylesheet"></link>
+    <link href="quoteStylez.css" type="text/css" rel="stylesheet"></link>
+	<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet" />
+	
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript" src="slidingFormz.js"></script>
+
+	<script type="text/javascript" src="legacy/datejs_core.js"></script>
+    <script type="text/javascript" src="quote.js"></script>
+	<script type="text/javascript" src="quoteFunctionz.js"></script>
+    <script type="text/javascript" src="writeDates_functionz.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        // JS goes here
+        var br = "<br />";
+		var skipDatesArray = new Array();
+		var skipDatesArray = convertArray(skipDates);
+		var today = getToday(new Date());
+		$(function() {
+			//$( "#simpleQuote" ).buttonset();
+		});
+        //]]>
+    </script>
+</head>
+<body>
+	<div>	
+		<form name="simpleQuoteForm" id="simpleQuote">
+			<div id="simpleType">
+			<input type="radio" id="rate2" name="simpleType" value='2'/><label for="rate2">Drop-in, Core</label>
+			<input type="radio" id="rate3" name="simpleType" value='3'/><label for="rate3">Drop-in, Assoc.</label>
+			<input type="radio" id="rate4" name="simpleType" value='4'/><label for="rate4">Quarterly, Core</label>
+			<input type="radio" id="rate5" name="simpleType" value='5'/><label for="rate5">Quarterly, Assoc.</label>
+			</div>
+			<br /><br />
+			<div id="simpleLength">
+			<input type="radio" id="20" name="simpleLength" value='20'/><label for="20">20 min</label>
+			<input type="radio" id="30" name="simpleLength" value='30'/><label for="30">30 min</label>
+			<input type="radio" id="45" name="simpleLength" value='45'/><label for="45">45 min</label>
+			<input type="radio" id="60" name="simpleLength" value='60' /><label for="60">60 min</label>
+			</div>
+			<br /><br />
+			<input type="text" id="simpleQuoteQty" name="simpleQuoteQty" />
+			<label for="simpleQuoteQty"># of lessons</label>
+			
+			<br /><br />
+			<a href="javascript: void(0)" onclick="document.simpleQuoteForm.simpleQuoteOutput.value = simpleQuote();">TEST</a>
+			<output name="simpleQuoteOutput" for="simpleType simpleLength simpleQuoteQty"></output>
+		</form>
+	</div>
+	<script>
+		$(function() {
+			$( "#simpleType" ).buttonset();
+			$( "#simpleLength" ).buttonset();
+		});
+		/*
+		for (i in rates) {
+			document.write('$', simpleQuote(rates[i]['20'], 1).toFixed(2), " for 20 min ", rates[i]['name'], " lessons\n", br);
+			document.write('$', simpleQuote(rates[i]['30'], 1).toFixed(2), " for 30 min ", rates[i]['name'], " lessons\n", br);
+			document.write('$', simpleQuote(rates[i]['45'], 1).toFixed(2), " for 45 min ", rates[i]['name'], " lessons\n", br);
+			document.write('$', simpleQuote(rates[i]['60'], 1).toFixed(2), " for 60 min ", rates[i]['name'], " lessons\n", br, br);
+		}
+		*/
+	</script>
+</body>
+</html>

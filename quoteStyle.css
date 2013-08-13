@@ -1,0 +1,301 @@
+* {
+	font-family: georgia;
+}
+.container {
+	width: 950px;
+	margin: 0 auto;
+}
+
+h1{
+	color:#783831;
+	font-size:36px;
+	text-shadow:1px 1px 1px #e5d3c1;
+	padding:20px;
+	text-align: center;
+}
+.vaParams fieldset {
+	padding-top: 10px;
+	margin:1px;
+	border:1px solid #ccc;-moz-border-radius:1em; 
+	-webkit-border-radius:1em;
+	border-radius:1em;
+	border-bottom-width:5px;
+	
+}
+
+/***reference menu in upper LH corner****/
+ul.reference{
+	position:fixed;
+	left:5px;
+	top:5px;
+	padding:0 5px;
+	font-size:10px;
+	text-shadow:1px 1px 1px #fff;
+	background: #ffc;
+	border-radius: .5em;
+	z-index: 3;
+	list-style-type: none;
+}
+ul.reference li {
+	margin: 5px;
+}
+ul.reference a{
+	color:#555;
+	text-decoration:underline;
+	text-transform:uppercase;
+}
+ul.reference a:hover{
+	color:#000; 
+}
+div#linkMenu > h4 {
+	float: right;
+	position: relative;
+	right: 100px;
+}
+
+/*****labels & legends*******/
+label#field_lessonQty_reprise {
+	position: relative;
+	top: 20px;
+	left: 150px;
+}
+
+/*********input*************/
+input:focus, textarea:focus, select:focus {
+	/*background:#ffc;*/
+	background-color:#FFFCD6;
+}
+.vaParams > input[type=text], .vaParams > input[type=number] {
+	clear: none;
+	float: none;
+	text-align: center;
+	font-family: 'courier new';
+	border: 1px solid #ddd;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.textArea {
+	font-family: 'courier new';
+    font-size: .9em;
+	border:1px solid #ccc;
+	border-radius: .5em;
+    width: 100%;
+    max-width: 100%;
+}
+input#field_lessonQty_reprise {
+	clear: right;
+	position: relative;
+	top: 40px;
+	left: 100px;
+	font-family: 'courier new';
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;	
+}
+
+/******parameters class********/
+.vaParams {
+	display: none;
+	text-align: center;
+	float: right;
+	clear: right;
+	position: relative;
+	top: 100px;
+	background-color: #d3dbd2;
+	border-radius: 1em;
+	padding: 5px;
+	padding-bottom: 10px;
+}
+
+/*******simple quote********/
+/***http://css-tricks.com/centering-in-the-unknown/***/
+/***http://bryanhadaway.com/how-to-create-circles-with-css/#***/
+div#simpleQuote {
+	margin: 0 auto;
+	width: 600px;
+    text-align: center;
+}
+.circle {
+    width:5em;
+    height:5em;
+    border-radius:2.5em;
+    font-size:5px;
+    color:#fff;
+    line-height:100px;
+    text-align:center;
+    background:#000;
+}
+div#simpleQuote label span {
+    line-height: 1.5em;
+    height: 4em;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+	margin: 0 auto;
+	width: 4em;
+}
+div#simpleType label, div#simpleLength label {
+    width: 100%;
+    margin: 1px auto;
+    height: 4em;
+    padding: 2px;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+}
+#simpleQuote ol {
+    vertical-align: middle;
+    list-style-type: none;
+}
+#simpleQuote ol > li {
+    height: 6em;
+    width: 100%;
+    margin: 5px;
+}
+#simpleQuote ul {
+    list-style-type: none;
+    width: 100%;
+    height: 6em;
+}
+#simpleQuote ul li {
+    vertical-align: top;
+    width: 12%;
+    display: inline-block;
+    margin: 0px 2px;
+}
+#simpleQuote ul#simpleQuote-programType li {
+    width: 12%;
+}
+#simpleQuote ul > li label {
+    vertical-align: middle;
+	text-align: center;
+}
+div#simpleQuote textarea {
+    width: 75%;
+    text-align: center;
+    height: 2em;
+    max-height: 4em;
+    max-width: 100%;
+}
+
+/*******output area********/
+div#output {
+	margin: 0 auto;
+	width: 600px;
+	
+}
+.outputTabs {
+	position: relative;   
+	min-height: 350px;  /*This part sucks */
+	margin: 0 auto;
+	width: 90%;
+	top: 25px;
+}
+.tab {
+	float: left;
+
+}
+.tab label {
+	background: #eee; 
+	padding: 5px; 
+	border: 1px solid #ccc;
+
+	margin-left: -1px; 
+	position: relative;
+	left: 1px; 
+	float: left;
+	
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	-webkit-border-top-right-radius: 1em;
+	-webkit-border-top-left-radius: 1em;
+	-moz-border-radius-topright: 1em;
+	-moz-border-top-lefet-radius: 1em;
+}
+.tab [type=radio] {
+	display: none;   
+}
+.content {
+	position: absolute;
+	top: 28px;
+	left: 0;
+	background: white;
+	right: 0;
+	bottom: 0;
+	padding: 5px;
+	border: 1px solid #ccc; 
+	
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
+	
+	-webkit-border-top-right-radius: 1em;
+	-webkit-border-bottom-right-radius: 1em;
+	-webkit-border-bottom-left-radius: 1em;
+	
+	-moz-border-top-right-radius: 1em;
+	-moz-border-bottom-right-radius: 1em;
+	-moz-border-bottom-left-radius: 1em;
+}
+.content input, .content h5, .content label {
+	font-weight: normal;
+	vertical-align: top;
+	padding: 3px; 
+	float: right;
+	clear: right;
+	margin: 0;
+	width: auto;
+	-webkit-border-top-right-radius: .5em;
+	-webkit-border-top-left-radius: .5em;
+	-moz-border-top-right-radius: .5em;
+	-moz-border-top-left-radius: .5em;
+}
+[type=radio]:checked ~ label {
+	z-index: 1;
+    vertical-align: middle;
+}
+[type=radio]:checked ~ label ~ .content {
+	z-index: 1;
+}
+.outputTabs [type=radio]:checked ~ label {
+	background: #D8D8D8;;
+	border-bottom: 0px solid white;
+	z-index: 1;
+}
+
+/********table************/
+table {
+	width: 700px;
+}
+table th {
+	text-align: center;
+}
+th h1{
+	font-family: 'Old English Text MT', 'Old English Text', 'Blackmoor LET', Blackmoor, 'Lucida Blackletter', Blackletter;
+}
+#step3 td { 
+	text-align: left;
+}
+#step3_creditTable {
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-radius: 1em;
+}
+table#credits td, #activeNet td {
+	text-align: right;
+}
+tr.table_creditsRow2 > td {
+	border-bottom: 1px dotted black;
+}
+#allThemRates td {
+	padding: 5px;
+	border: 1px dotted black;
+	font-family: "courier new";
+	text-align: center;
+    width: 80px;
+}
+#allThemRates td.leftCells {
+	text-align: left;
+	width: 30%;
+}

@@ -1,0 +1,19 @@
+<li>
+	<a href="javascript: void(0)" id="submitButton" tabindex="13" onclick="
+		var dateStart = new Date(document.params.dateStart.value); 
+		var dateEnd = new Date(document.params.dateEnd.value); 
+		var lessonDatesArray = createMatchingWeekdays(dateStart, dateEnd, getWeekday()).filter(filterHolidays); 
+		printOneRate(getLessonCode(), getLessonLength());
+		printLessonQty(lessonDatesArray);
+		document.viewAdjustParams.field_lessonSubTotal.value = calcSub_Lessons().toFixed(2);
+		calcSub_ProgramEvents();
+		printSub_ProgramEvents();
+		document.viewAdjustParams.field_MMARegFees.value = calcSub_RegFee().toFixed(2);
+		var instances = ppInstances();
+		document.quoteOutput.ppOutput.value = instances;
+		printQuote(lessonDatesArray);
+		writeToTextArea(convertArray(lessonDatesArray)); 
+		printSkips(convertArray(jQuery.grep(skipDatesArray, function(d){return (d.getDay() == getWeekday());})));
+	"><h3 id="rockenroll">Rock Enroll</h3>
+	</a>
+</li>

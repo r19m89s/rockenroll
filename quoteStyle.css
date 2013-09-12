@@ -1,0 +1,374 @@
+* {
+	font-family: georgia;
+}
+.container {
+	width: 950px;
+	margin: 0 auto;
+}
+
+h1 {
+	color:#783831;
+	font-size:36px;
+	text-shadow:1px 1px 1px #e5d3c1;
+	padding:20px;
+	text-align: center;
+}
+
+/***reference menu in upper LH corner****/
+/*ul#navAndLinks{
+	position:fixed;
+	left:5px;
+	top:5px;
+	padding:0 5px;
+	font-size:10px;
+	text-shadow:1px 1px 1px #fff;
+	background: #ffc;
+	border-radius: .5em;
+	z-index: 3;
+	list-style-type: none;
+}
+*/
+
+ul#navAndLinks {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: 1.6em;
+    background: #803724;
+    padding: 0;
+    -webkit-box-shadow: 0px 0px 5px #333;
+    -moz-box-shadow: 0px 0px 5px #333;
+    box-shadow: 0px 0px 5px #333333;
+}
+ul#navAndLinks ul {
+    width: 15em;
+    -webkit-box-shadow: 0px 0px 5px #333;
+    -moz-box-shadow: 0px 0px 5px #333;
+    box-shadow: 0px 0px 5px #333333;
+    border-radius: 1em;
+}
+ul#navAndLinks li {
+    padding:0 5px;
+    text-align: center;
+    display: inline;
+    border: 0;
+    line-height: 1.5em;
+}
+ul#navAndLinks li ul.outsideLinks {
+    display: none;
+    position: relative;
+    top: 150%;
+    right: 5%;
+    float: right;
+    background: #000;
+}
+ul#navAndLinks li ul.outsideLinks li {
+    display: block;
+    list-style-type: none;
+    text-align: right;
+}
+ul#navAndLinks a{
+	color: #fff1c7;
+	text-decoration:underline;
+	text-transform:uppercase;
+}
+ul#navAndLinks a:hover{
+	color:#e5d3aa; 
+}
+#mobile-header {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 25%;
+}
+
+@media only screen and (max-width: 900px){
+    #mobile-header {
+        display: block;
+        float: none;
+        width: 5%;
+    }
+}
+
+/*****labels & legends*******/
+label#field_lessonQty_reprise {
+	position: relative;
+	top: 20px;
+	left: 150px;
+}
+
+/*******simple quote********/
+/***http://css-tricks.com/centering-in-the-unknown/***/
+/***http://bryanhadaway.com/how-to-create-circles-with-css/#***/
+div#simpleQuote {
+    margin: 0 auto;
+	width: 600px;
+    text-align: center;
+}
+.circle {
+    width:5em;
+    height:5em;
+    border-radius:2.5em;
+    font-size:5px;
+    color:#fff;
+    line-height:100px;
+    text-align:center;
+    background:#000;
+}
+div#simpleQuote label span {
+    line-height: 1.5em;
+    height: 4em;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+	margin: 0 auto;
+	width: 4em;
+}
+div#simpleType label, div#simpleLength label {
+    width: 100%;
+    margin: 1px auto;
+    height: 4em;
+    padding: 2px;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+}
+#simpleQuote ol {
+    vertical-align: middle;
+    list-style-type: none;
+}
+#simpleQuote ol > li {
+    width: 100%;
+    margin: 5px;
+}
+#simpleQuote ul {
+    list-style-type: none;
+    width: 100%;
+    height: 6em;
+}
+#simpleQuote ul li {
+    vertical-align: top;
+    width: 12%;
+    display: inline-block;
+    margin: 0px 2px;
+}
+#simpleQuote ul#simpleQuote-programType li {
+    width: 12%;
+}
+#simpleQuote ul > li label {
+    vertical-align: middle;
+	text-align: center;
+}
+div#simpleQuote textarea {
+    width: 75%;
+    text-align: center;
+    height: 2em;
+    max-height: 4em;
+    max-width: 100%;
+}
+form#simpleQuote input[type=text] {
+    text-align: center;
+}
+
+/******parameters class********/
+.vaParams {
+    display: none;
+	text-align: center;
+	float: right;
+	clear: right;
+	position: relative;
+	top: 100px;
+	background-color: #d3dbd2;
+	border-radius: 1em;
+	padding: 5px;
+	padding-bottom: 10px;
+}
+.vaParams fieldset {
+    padding-top: 10px;
+	margin:1px;
+	border:1px solid #ccc;-moz-border-radius:1em; 
+	-webkit-border-radius:1em;
+	border-radius:1em;
+	border-bottom-width:5px;
+	
+}
+/*********input*************/
+input:focus, textarea:focus, select:focus {
+	/*background:#ffc;*/
+	background-color:#FFFCD6;
+}
+.vaParams > input[type=text], .vaParams > input[type=number] {
+	clear: none;
+	float: none;
+	text-align: center;
+	font-family: 'courier new';
+	border: 1px solid #ddd;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+input#field_lessonQty_reprise {
+	clear: right;
+	position: relative;
+	top: 40px;
+	left: 100px;
+	font-family: 'courier new';
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;	
+}
+
+/*******output area********/
+div#output {
+    margin: 0 auto;
+	width: 600px;
+}
+.outputTabs {
+	position: relative;   
+	min-height: 350px;  /*This part sucks */
+	margin: 0 auto;
+	width: 90%;
+	top: 25px;
+}
+.tab {
+	float: left;
+}
+.tab label {
+	background: #eee; 
+	padding: 5px; 
+	border: 1px solid #ccc;
+
+	margin-left: -1px; 
+	position: relative;
+	left: 1px; 
+	float: left;
+	
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	-webkit-border-top-right-radius: 1em;
+	-webkit-border-top-left-radius: 1em;
+	-moz-border-radius-topright: 1em;
+	-moz-border-top-lefet-radius: 1em;
+}
+.tab [type=radio] {
+	display: none;   
+}
+[type=radio]:checked ~ label {
+    z-index: 1;
+    vertical-align: middle;
+}
+[type=radio]:checked ~ label ~ .outputcontent {
+	z-index: 1;
+}
+.tab [type=radio]:checked ~ label {
+	background: #D8D8D8;;
+	border-bottom: 0px solid white;
+	z-index: 1;
+}
+label.flash {
+    background: #803724;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.textArea {
+    font-family: 'courier new';
+    font-size: 1em;
+	border:1px solid #ccc;
+	border-radius: .5em;
+    width: 100%;
+    max-width: 100%;
+}
+.outputcontent {
+	position: absolute;
+	top: 28px;
+	left: 0;
+	background: white;
+	right: 0;
+	bottom: 0;
+	padding: 5px;
+	border: 1px solid #ccc; 
+	
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
+	
+	-webkit-border-top-right-radius: 1em;
+	-webkit-border-bottom-right-radius: 1em;
+	-webkit-border-bottom-left-radius: 1em;
+	
+	-moz-border-top-right-radius: 1em;
+	-moz-border-bottom-right-radius: 1em;
+	-moz-border-bottom-left-radius: 1em;
+}
+.outputcontent input, .outputcontent h5, .outputcontent label {
+	font-weight: normal;
+	vertical-align: top;
+	padding: 3px; 
+	float: right;
+	clear: right;
+	margin: 0;
+	width: auto;
+	-webkit-border-top-right-radius: .5em;
+	-webkit-border-top-left-radius: .5em;
+	-moz-border-top-right-radius: .5em;
+	-moz-border-top-left-radius: .5em;
+}
+
+/********table************/
+table {
+	width: 65%;
+    margin: 0 auto;
+}
+table#allThemRates {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    margin: 0 auto;
+    width: 70%; 
+	background-color: #eee;
+	border: 1px solid #555;
+    border-radius: 5px;
+    padding: .4em;
+	font-size: 1.1em;
+	opacity: .95;
+    z-index: 2;
+}
+table#allThemRates td {
+    border: 1px dotted black;
+	font-family: "courier new";
+	text-align: center;
+    width: 80px;
+}
+table#allThemRates td.leftCells {
+	text-align: left;
+	width: 35%;
+}
+table th {
+	text-align: center;
+}
+th h1 {
+	font-family: 'Old English Text MT', 'Old English Text', 'Blackmoor LET', Blackmoor, 'Lucida Blackletter', Blackletter;
+}
+table#step3 td { 
+	text-align: left;
+}
+table#step3_creditTable {
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-radius: 1em;
+}
+table#credits td, #activeNet td {
+	text-align: right;
+}
+tr.table_creditsRow2 > td {
+	border-bottom: 1px dotted black;
+}
+
+/****tooltips****/
+/***http://jsfiddle.net/gilly3/b3PjW/***/
+span#tip_refRates {
+
+}

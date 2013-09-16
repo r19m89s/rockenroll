@@ -186,6 +186,10 @@ function calcSub_RegFee()
 function calcTotal_Charges()
 {	
 	var tuition = calcSub_Lessons() + calcSub_ProgramEvents() + calcSub_RegFee();
+<<<<<<< HEAD
+=======
+	tuition -= calcCredits();
+>>>>>>> b64d8454b79c389b065b2532e8c973618198ddec
 	return tuition;
 }
 
@@ -252,7 +256,10 @@ function printOneRate(code, length)
 function printLessonQty(paramArray)
 {
 	document.viewAdjustParams.field_lessonQty.value = paramArray.length;
+<<<<<<< HEAD
     return paramArray.length;
+=======
+>>>>>>> b64d8454b79c389b065b2532e8c973618198ddec
 }
 
 function printSub_ProgramEvents()
@@ -260,10 +267,16 @@ function printSub_ProgramEvents()
 	document.viewAdjustParams.field_programEventFees.value = calcSub_ProgramEvents().toFixed(2);
 }
 
+<<<<<<< HEAD
 function printQuote(paramArray)
 {
     var lessonQty = paramArray.length;
     //var lessonQty = document.viewAdjustParams.field_lessonQty.value;
+=======
+function printQuote()
+{
+	var lessonQty = document.viewAdjustParams.field_lessonQty.value;
+>>>>>>> b64d8454b79c389b065b2532e8c973618198ddec
 	var summer = function() {
 		var x = document.params.summerToggle.value;
 		if (x === 'yes') {
@@ -274,7 +287,11 @@ function printQuote(paramArray)
 	};
 	
 	var numPayments = monthDiff(); //this is faulty design, only provides good data for monthly payment plans.
+<<<<<<< HEAD
     /*var getAcademyEvents = function(paramArray) {
+=======
+    var getAcademyEvents = function(paramArray) {
+>>>>>>> b64d8454b79c389b065b2532e8c973618198ddec
         for (var key in paramArray) {
             var obj = paramArray[key];
             for (var prop in obj) {
@@ -287,6 +304,7 @@ function printQuote(paramArray)
         }
     };
 	
+<<<<<<< HEAD
 	var alsoIncludez = function() {
         var academyEvents = [];
             academyEvents[0] = {"date": "Sep 08 2013", "name": "Encore Performance"};
@@ -298,6 +316,9 @@ function printQuote(paramArray)
             academyEvents[6] = {"date": "May 18 2014", "name": "End of the year recital 1"};
             academyEvents[7] = {"date": "Jun 01 2014", "name": "End of the year recital 2"};
             academyEvents[8] = {"date": "Jun 08 2014", "name": "End of the year recital 3"};
+=======
+	/*var alsoIncludes = function() {
+>>>>>>> b64d8454b79c389b065b2532e8c973618198ddec
 		dateStart = new Date(document.params.dateStart.value);
 		var eventDate;
 		var academyEventsProRated = [];
@@ -319,10 +340,16 @@ function printQuote(paramArray)
 												"\n\n" + 
 												"$" + (calcTotal_Charges() / numPayments).toFixed(2) + " per installment for " + numPayments + " installments");
     
+<<<<<<< HEAD
 	//document.quoteOutput.alsoIncludes.value = alsoIncludez();
 	
     
     document.quoteOutput.alsoIncludes.value =   "Sunday " + academyEvents[0]['date'] + ": " + academyEvents[0]['name'] + 
+=======
+	//document.quoteOutput.alsoIncludes.value = alsoIncludes();
+	
+	document.quoteOutput.alsoIncludes.value =   "Sunday " + academyEvents[0]['date'] + ": " + academyEvents[0]['name'] + 
+>>>>>>> b64d8454b79c389b065b2532e8c973618198ddec
                                                 "\nSunday " + academyEvents[1]['date'] + ": " + academyEvents[1]['name'] + 
                                                 "\nSunday " + academyEvents[2]['date'] + ": " + academyEvents[2]['name'] +
                                                 "\nThe week of " + "Jan 06 2014 - Jan 12 2014: Academy Wide Themed Workshops" + 
@@ -332,8 +359,12 @@ function printQuote(paramArray)
                                                 "\n\n" + "and one of the following End of the year Recital dates:" +
                                                 "\nSunday " + academyEvents[6]['date'] + ": " + academyEvents[6]['name'] +
                                                 "\nSunday " + academyEvents[7]['date'] + ": " + academyEvents[7]['name'] +
+<<<<<<< HEAD
                                                 "\nSunday " + academyEvents[8]['date'] + ": " + academyEvents[8]['name'] + 
                                                 "\nOne free pass to each professional concert in the Featured Artist Concert Series. RSVP Required.";
+=======
+                                                "\nSunday " + academyEvents[8]['date'] + ": " + academyEvents[8]['name'];
+>>>>>>> b64d8454b79c389b065b2532e8c973618198ddec
 												
 }
 
